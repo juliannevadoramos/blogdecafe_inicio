@@ -263,11 +263,34 @@ img{
 /*CURSOS*/
 
 .curso{
-    padding: 3rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid #9d9a9a;
 }
+
+@media (min-width: 768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+    }
+
 
 .curso:last-of-type{
     border: none;
     
+}
+
+/*Esto se debería poner junto a widget_curso a través de comas para evitar duplicidad de código, pero lo pongo así para tener la seccion de cursos junta*/
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.curso__info{
+    font-weight: normal;
+}
+
+.curso__label,.curso__info{
+    font-size: 2rem;
 }
